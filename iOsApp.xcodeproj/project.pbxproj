@@ -14,6 +14,7 @@
 		AAAED93020EE082900E004DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAAED92E20EE082900E004DA /* LaunchScreen.storyboard */; };
 		AAAED93B20EE082900E004DA /* iOsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAED93A20EE082900E004DA /* iOsAppTests.swift */; };
 		AAAED94620EE082900E004DA /* iOsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAED94520EE082900E004DA /* iOsAppUITests.swift */; };
+		AAAED95420EE1CC100E004DA /* ScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAED95320EE1CC100E004DA /* ScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		AAAED94120EE082900E004DA /* iOsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAAED94520EE082900E004DA /* iOsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOsAppUITests.swift; sourceTree = "<group>"; };
 		AAAED94720EE082900E004DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAAED95320EE1CC100E004DA /* ScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				AAAED92520EE082900E004DA /* AppDelegate.swift */,
 				AAAED92720EE082900E004DA /* ViewController.swift */,
+				AAAED95320EE1CC100E004DA /* ScreenViewController.swift */,
 				AAAED92920EE082900E004DA /* Main.storyboard */,
 				AAAED92C20EE082900E004DA /* Assets.xcassets */,
 				AAAED92E20EE082900E004DA /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				AAAED92820EE082900E004DA /* ViewController.swift in Sources */,
 				AAAED92620EE082900E004DA /* AppDelegate.swift in Sources */,
+				AAAED95420EE1CC100E004DA /* ScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

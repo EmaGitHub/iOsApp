@@ -33,13 +33,52 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="ViewConto">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apps" translatesAutoresizingMaskIntoConstraints="NO" id="0tK-EI-svB">
+                                <rect key="frame" x="78" y="261" width="219" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95e-xX-ABs">
+                                <rect key="frame" x="105" y="589" width="143" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.64213149603077502" green="0.9298494170984456" blue="0.90914561352953405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Go Ahead"/>
+                                <connections>
+                                    <segue destination="ee5-Ad-FVE" kind="show" id="Ejp-gH-DAY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.77732969258725859" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="DUC-g7-Asp"/>
+                    <connections>
+                        <outlet property="goButton" destination="95e-xX-ABs" id="bjm-UB-LfX"/>
+                        <outlet property="imageViewHome" destination="0tK-EI-svB" id="cUI-pe-yD7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="106.59670164917542"/>
+        </scene>
+        <!--HomeScreen-->
+        <scene sceneID="VC4-uB-59f">
+            <objects>
+                <viewController title="HomeScreen" id="ee5-Ad-FVE" customClass="ScreenViewController" customModule="iOsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zfd-Nv-mfQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.46088896410975733" green="1" blue="0.91038741134913925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="f1O-7C-6jS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TOr-5y-Oty" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002" y="107"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="apps" width="1347" height="1162"/>
+    </resources>
 </document>
