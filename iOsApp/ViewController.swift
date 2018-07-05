@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         let lbl = UILabel(frame: CGRect(x:50, y:150, width:200, height:30))
         lbl.text = "Hi Everyone!!"
         lbl.textColor = white
+        lbl.font = UIFont.systemFont(ofSize: 30.0)
         
         let img = UIImage(named: "iOs.png")
         let imageView = UIImageView(image: img)
