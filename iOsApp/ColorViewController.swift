@@ -16,7 +16,13 @@ class ColorViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         getCurrentDate()
-    }
+        
+             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                self.lblDate.backgroundColor = self.getRandomColor()
+                self.lblDateSec.backgroundColor = self.getRandomColor()
+             })
+        
+        }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -34,6 +40,7 @@ class ColorViewController: UIViewController {
     }
     */
     @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var lblDateSec: UILabel!
     
     func getCurrentDate() {
 
@@ -46,6 +53,8 @@ class ColorViewController: UIViewController {
         
         lblDate.text = "Current Time: " + result
         lblDate.backgroundColor = getRandomColor()
+        lblDateSec.text = "Current Time: " + result
+        lblDateSec.backgroundColor = getRandomColor()
     }
     
     
