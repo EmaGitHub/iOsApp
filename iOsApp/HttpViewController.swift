@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class HttpViewController: UIViewController {
 
@@ -35,22 +36,35 @@ class HttpViewController: UIViewController {
     @IBOutlet weak var editTextHttp: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
     
+    
     @IBAction func buttonHttpAction(_ sender: UIButton) {
     
-        let remoteURL = URL(string: editTextHttp.text!)!
+        self.makeRequest(remoteUrl: editTextHttp.text!)
         
-        Alamofire.request(remoteURL).response { response in
-            print("Request: \(response.request)")
-            print("Response: \(response.response)")
-            print("Error: \(response.error)")
-            
-            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                print("Data: \(utf8Text)")
+        //resultLabel!.text = String(decoding: , as:UTF8.self)
+        
+        }
+    
+    func makeRequest(remoteUrl: String){
+        
+        let parameters: Parameters = ["": ""]
+        
+        
+        let url = "https://www.google.it"
+        Alamofire.request( url, parameters: parameters).validate().responseString { response in
+            switch response.result {
+            case .success(let data):
+                //let json = JSON(data)
+                //let text = json["rawString"]
+                print(data)
+                self.resultLabel.text = data
+                
+            case .failure(let error):
+                print("Request failed with error: \(error)")
             }
-            
-            resultLabel!.text = data
-        
         }
         
     }
+        
 }
+
