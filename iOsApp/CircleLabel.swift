@@ -25,7 +25,6 @@ class CircleLabel: UILabel {
         self.clipsToBounds = true
         self.textColor = UIColor.white
         self.setProperties(borderWidth: 1.0, borderColor:UIColor.black)
-        self.text = "Eversor"
         self.textColor = UIColor.darkGray
         self.backgroundColor = UIColor.cyan
     }

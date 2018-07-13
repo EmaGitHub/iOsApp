@@ -16,7 +16,7 @@ class ColorViewController: UIViewController {
         // Do any additional setup after loading the view.
         getCurrentDate()
         
-        let myCustomLabel = CircleLabel(frame: CGRect(x: self.view.frame.size.width / 2, y: self.view.frame.size.height / 2, width: 100, height: 100))
+        let myCustomLabel = CircleLabel(frame: CGRect(x: self.view.frame.size.width / 2 - 100, y: self.view.frame.size.height / 2 - 100, width: 200, height: 200))
         myCustomLabel.textColor = UIColor.white
         
         self.view.addSubview(myCustomLabel)
