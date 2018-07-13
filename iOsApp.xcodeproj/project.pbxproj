@@ -10,6 +10,7 @@
 		08B2268EE57D60BCB2D3EAF1 /* Pods_iOsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33ABA0348738117C77ECA52D /* Pods_iOsApp.framework */; };
 		AA2FB99C20EE500E00397926 /* HttpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2FB99B20EE500E00397926 /* HttpViewController.swift */; };
 		AA3C1C3B20EE2AB100FC164F /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C1C3A20EE2AB100FC164F /* ColorViewController.swift */; };
+		AA4D14BA20F8938B00EDDEE4 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4D14B920F8938B00EDDEE4 /* WebViewViewController.swift */; };
 		AAAED92620EE082900E004DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAED92520EE082900E004DA /* AppDelegate.swift */; };
 		AAAED92820EE082900E004DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAED92720EE082900E004DA /* ViewController.swift */; };
 		AAAED92B20EE082900E004DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAAED92920EE082900E004DA /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		8AC3806CB119D0193698B1E0 /* Pods-iOsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOsApp/Pods-iOsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AA2FB99B20EE500E00397926 /* HttpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpViewController.swift; sourceTree = "<group>"; };
 		AA3C1C3A20EE2AB100FC164F /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		AA4D14B920F8938B00EDDEE4 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 		AAAED92220EE082900E004DA /* iOsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAAED92520EE082900E004DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAAED92720EE082900E004DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				AAAED92E20EE082900E004DA /* LaunchScreen.storyboard */,
 				AAAED93120EE082900E004DA /* Info.plist */,
 				AA2FB99B20EE500E00397926 /* HttpViewController.swift */,
+				AA4D14B920F8938B00EDDEE4 /* WebViewViewController.swift */,
 			);
 			path = iOsApp;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				AAAED92620EE082900E004DA /* AppDelegate.swift in Sources */,
 				AA3C1C3B20EE2AB100FC164F /* ColorViewController.swift in Sources */,
 				AAAED95420EE1CC100E004DA /* ScreenViewController.swift in Sources */,
+				AA4D14BA20F8938B00EDDEE4 /* WebViewViewController.swift in Sources */,
 				AA2FB99C20EE500E00397926 /* HttpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

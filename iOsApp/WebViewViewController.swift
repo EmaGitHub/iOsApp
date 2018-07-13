@@ -1,25 +1,25 @@
 //
-//  ScreenViewController.swift
+//  WebViewViewController.swift
 //  iOsApp
 //
-//  Created by Emanuele Calvisi on 05/07/2018.
+//  Created by Emanuele Calvisi on 13/07/2018.
 //  Copyright © 2018 Emanuele Calvisi. All rights reserved.
 //
 
 import UIKit
 
-class ScreenViewController: UIViewController {
+class WebViewViewController: UIViewController {
+
+    @IBOutlet weak var testText: UITextView!
+    var stringaDiPassaggio: String = String()
     
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var testTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        var conto_banca: Double? = 4
-        
-        self.textView.text = "Nel conto ci sono: \(conto_banca) (optional) \(conto_banca!) (non optional) euro"
-        // Nel mio conto ci sono Optional(4.0) euro
+        self.testText.text = self.stringaDiPassaggio
     }
 
     override func didReceiveMemoryWarning() {

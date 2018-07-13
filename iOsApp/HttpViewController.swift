@@ -34,30 +34,25 @@ class HttpViewController: UIViewController {
     */
     
     @IBOutlet weak var editTextHttp: UITextField!
-    @IBOutlet weak var resultLabel: UILabel!
-    
+    @IBOutlet weak var resultTextView: UITextView!
     
     @IBAction func buttonHttpAction(_ sender: UIButton) {
     
         self.makeRequest(remoteUrl: editTextHttp.text!)
-        
-        //resultLabel!.text = String(decoding: , as:UTF8.self)
-        
+
         }
     
     func makeRequest(remoteUrl: String){
         
         let parameters: Parameters = ["": ""]
         
-        
-        let url = "https://www.google.it"
+        let url = self.editTextHttp.text!
         Alamofire.request( url, parameters: parameters).validate().responseString { response in
             switch response.result {
             case .success(let data):
-                //let json = JSON(data)
-                //let text = json["rawString"]
+
                 print(data)
-                self.resultLabel.text = data
+                self.resultTextView.text = data
                 
             case .failure(let error):
                 print("Request failed with error: \(error)")
@@ -65,6 +60,32 @@ class HttpViewController: UIViewController {
         }
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        // Controllo se il segue ha un identifier o meno, se non ce l'ha esco dalla func
+        guard let identifier = segue.identifier else {
+            print("il segue non ha un identifier, esco dal prepareForSegue")
+            return
+        }
         
+        // Controllo l'identifier perché potrebbero esserci più di un Segue che parte da questo VC
+        switch identifier {
+        case "webViewSegue":
+            // Accedo al destinationViewController del segue e lo casto del tipo di dato opportuno
+            // Modifico la variabile d'appoggio con il contenuto che voglio inviare
+            let vc_destinazione = segue.destination as! WebViewViewController
+            vc_destinazione.stringaDiPassaggio = self.editTextHttp.text!
+            
+        default:
+            return
+        }
+    }
+    @IBAction func segueAction(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "webViewSegue", sender: nil)
+    }
+
+    
+    
 }
 

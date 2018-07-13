@@ -17,11 +17,11 @@ class ColorViewController: UIViewController {
         // Do any additional setup after loading the view.
         getCurrentDate()
         
+        while true{
              DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-                self.lblDate.backgroundColor = self.getRandomColor()
-                self.lblDateSec.backgroundColor = self.getRandomColor()
-             })
-        
+                self.getCurrentDate()
+                })
+            }
         }
 
     override func didReceiveMemoryWarning() {
