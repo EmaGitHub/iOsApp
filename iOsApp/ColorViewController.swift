@@ -9,7 +9,6 @@
 import UIKit
 
 class ColorViewController: UIViewController {
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,11 +16,15 @@ class ColorViewController: UIViewController {
         // Do any additional setup after loading the view.
         getCurrentDate()
         
-        while true{
+        let myCustomLabel = CircleLabel(frame: CGRect(x: self.view.frame.size.width / 2, y: self.view.frame.size.height / 2, width: 100, height: 100))
+        myCustomLabel.textColor = UIColor.white
+        
+        self.view.addSubview(myCustomLabel)
+
              DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
                 self.getCurrentDate()
                 })
-            }
+        
         }
 
     override func didReceiveMemoryWarning() {
