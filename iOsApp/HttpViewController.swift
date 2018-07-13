@@ -15,6 +15,7 @@ class HttpViewController: UIViewController {
     override func viewDidLoad() {
                  super.viewDidLoad()
         
+                self.editTextHttp.text = "https://"
              }
 
     override func didReceiveMemoryWarning() {
@@ -51,7 +52,6 @@ class HttpViewController: UIViewController {
             switch response.result {
             case .success(let data):
 
-                print(data)
                 self.resultTextView.text = data
                 
             case .failure(let error):

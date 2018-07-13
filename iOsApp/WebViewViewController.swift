@@ -7,21 +7,30 @@
 //
 
 import UIKit
+import WebKit
 
-class WebViewViewController: UIViewController {
+class WebViewViewController: UIViewController, WKNavigationDelegate {
 
     @IBOutlet weak var testText: UITextView!
     var stringaDiPassaggio: String = String()
     
-    @IBOutlet weak var testTextView: UITextView!
+    @IBOutlet weak var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.testText.text = self.stringaDiPassaggio
+        self.testText.text = "URL: " + self.stringaDiPassaggio
+        
+        let url = URL(string: self.stringaDiPassaggio)!
+        webView.load(URLRequest(url: url))
+        webView.allowsBackForwardNavigationGestures = true
+        
+        //add observer to get estimated progress value
+        //self.webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil);
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -37,5 +46,7 @@ class WebViewViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
 
 }
